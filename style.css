@@ -1,0 +1,278 @@
+.exile-regular {
+  font-family: "Exile", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.textbox {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  font-size: 250%;
+  text-transform: capitalize;
+  border: none;
+  box-shadow: 0 4px 10px 0 #4d5057;
+  border-radius: 8px;
+}
+h1 {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border-bottom: 1px solid black;
+  width: 100vw;
+  color: #4e6e5d;
+  font-family: "Exile", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4dvh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100dvw;
+  /* overflow: hidden; */
+  flex-direction: column;
+  background-color: #cfcfcf;
+}
+.bcg-correct {
+  background-color: rgb(35, 191, 56);
+}
+
+.bcg-wrong {
+  background-color: #b02c2c;
+}
+.filter {
+  filter: blur(4px);
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-size: 150%;
+  border: none;
+  box-shadow: 0 4px 10px 0 #4d5057;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: rgb(55, 155, 55);
+  color: white;
+}
+
+.gameboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  border-radius: 20px;
+  background-color: black;
+}
+
+.inputRow {
+  display: flex;
+  gap: 0.9rem;
+  padding-bottom: 1rem;
+  /* filter: blur(4px); */
+}
+
+.alertBox {
+  width: 20rem;
+  height: 35%;
+  height: 15rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(55, 155, 55);
+  background-color: white;
+  /* padding: 10%; */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px 0 #4d5057;
+
+  position: absolute;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 250%;
+  color: white;
+  color: rgb(55, 155, 55);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.btnAlert {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-size: 150%;
+  border: none;
+  box-shadow: 0 4px 10px 0 #4d5057;
+  border-radius: 8px;
+}
+.btnAlert:hover {
+  background-color: rgb(55, 155, 55);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+/* RESULT OUTPUT */
+.correct {
+  background-color: rgb(55, 155, 55);
+  color: white;
+}
+
+.present {
+  background-color: rgb(200, 200, 46);
+  color: white;
+}
+
+.absent {
+  background-color: grey;
+  color: white;
+}
+
+/* Flip animation */
+@keyframes flip {
+  0% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(70deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+.flip {
+  animation: flip 0.4s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce {
+  animation: bounce 0.3s ease-in-out;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .textbox {
+    width: 45px;
+    height: 45px;
+    font-size: 150%;
+  }
+
+  .inputRow {
+    gap: 0.5rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .btn,
+  .btnAlert {
+    width: 80px;
+    height: 35px;
+    font-size: 120%;
+  }
+
+  h1 {
+    font-size: 3dvh;
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .alertBox {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    font-size: 80%;
+  }
+
+  .text {
+    font-size: 180%;
+  }
+
+  body {
+    padding: 1rem;
+    height: 100svh; 
+  }
+}
+
+.textbox {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .textbox {
+    width: 50px;
+    height: 50px;
+    font-size: 200%;
+  }
+
+  .inputRow {
+    gap: 0.8rem;
+    padding-bottom: 1rem;
+  }
+
+  .btn,
+  .btnAlert {
+    width: 90px;
+    height: 38px;
+    font-size: 130%;
+  }
+
+  h1 {
+    font-size: 3.5dvh;
+    left: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .alertBox {
+    width: 75%;
+    height: auto;
+    padding: 1.5rem;
+    font-size: 90%;
+  }
+
+  .text {
+    font-size: 220%;
+  }
+
+  body {
+    padding: 1.5rem;
+  }
+}
