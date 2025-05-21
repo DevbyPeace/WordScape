@@ -142,9 +142,15 @@ body {
   color: white;
 }
 
-.present {
+/*.present {
   background-color: rgb(200, 200, 46);
   color: white;
+}*/
+
+.present {
+  background-color: #FFD700;
+  color: black;
+  border: 2px solid #999;
 }
 
 .absent {
