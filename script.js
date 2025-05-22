@@ -5879,7 +5879,7 @@ function finalBlur(word) {
   if (document.activeElement && document.activeElement.blur) {
     document.activeElement.blur();
   }
-  if (word === wordToGuess) {
+  if (word.toLowerCase() === wordToGuess) {
     document.querySelector(".gameBoard").classList.add("filter");
     document.querySelector(".alertBox").classList.remove("hidden");
     document.querySelector(".btn").classList.add("hidden");
@@ -5892,7 +5892,7 @@ function finalBlur(word) {
     inputBoxes.forEach((box) => {
       box.disabled = true;
     });
-  } else if (currentRow > 6 && word !== wordToGuess) {
+  } else if (currentRow > 6 && word.toLowerCase() !== wordToGuess) {
     document.querySelector(".gameBoard").classList.add("filter");
     document.querySelector(".alertBox").classList.remove("hidden");
     document.querySelector(".alertBox").classList.add("bounce");
@@ -5908,7 +5908,7 @@ function finalBlur(word) {
   }
 }
 
-//// Word Validator (check console for guide)
+//// Word Validator (check console for guide) fOR CHANGING THE COLORS
 function validator(word) {
   const wordArr = word.split("");
   wordArr.forEach((letter, index) => {
