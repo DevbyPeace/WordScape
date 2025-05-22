@@ -142,20 +142,9 @@ body {
   color: white;
 }
 
-<<<<<<< HEAD
-.present {
-  /* background-color: rgb(243, 243, 9); */
-  background-color:  #FFD700;;
-=======
-/*.present {
-  background-color: rgb(200, 200, 46);
->>>>>>> 8b2f668ad5198aaff37c284e41b8ca9a95cc4ed4
-  color: white;
-}*/
-
 .present {
   background-color: #FFD700;
-  color: black;
+  color: white;
   border: 2px solid #999;
 }
 
