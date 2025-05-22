@@ -33,5 +33,5 @@ This project isn’t just a technical milestone, it's an emotional one too. I’
 - A whole lot of dedication and `console.log`s lol 
 
 ---
-
+You can check it out here - https://wordscapes.netlify.app/
 Thanks for reading — and thank you **Wordscape** for being part of my growth. 💚  
