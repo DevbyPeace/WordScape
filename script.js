@@ -5847,7 +5847,10 @@ function inputSubmission() {
   const wordGuessed = wordArr.join("");
   if (!dictionary.includes(wordGuessed.toLowerCase()))
     console.log(`${wordGuessed} is not a valid English word`);
-  if (wordGuessed.length === 5 && dictionary.includes(wordGuessed.toLowerCase())) {
+  if (
+    wordGuessed.length === 5 &&
+    dictionary.includes(wordGuessed.toLowerCase())
+  ) {
     // finalBlur(wordGuessed);
     validator(wordGuessed);
     currentRowBoxes.forEach((box) => (box.disabled = true));
@@ -5914,7 +5917,7 @@ function validator(word) {
       currentRowBoxes[index].classList.add("correct");
     } else if (
       wordArr[index].toLowerCase() !== wordToGuess[index] &&
-      wordToGuess.includes(wordArr[index])
+      wordToGuess.includes(wordArr[index].toLowerCase())
     ) {
       console.log(`${wordArr[index].toUpperCase()} is not in the right spot`);
       currentRowBoxes[index].classList.add("present");
