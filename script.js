@@ -5845,9 +5845,9 @@ function inputSubmission() {
   let wordArr = [];
   Array.from(currentRowBoxes).map((box) => wordArr.push(box.value));
   const wordGuessed = wordArr.join("");
-  if (!dictionary.includes(wordGuessed))
+  if (!dictionary.includes(wordGuessed.toLowerCase()))
     console.log(`${wordGuessed} is not a valid English word`);
-  if (wordGuessed.length === 5 && dictionary.includes(wordGuessed)) {
+  if (wordGuessed.length === 5 && dictionary.includes(wordGuessed.toLowerCase())) {
     // finalBlur(wordGuessed);
     validator(wordGuessed);
     currentRowBoxes.forEach((box) => (box.disabled = true));
